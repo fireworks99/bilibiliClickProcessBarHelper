@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bfa;
+  width: 200px;
+  font-family: STKaiti, serif;
+}
+
+h3 {
+  background-color: pink;
+  text-align: center;
+}
+
+.tag {
+  display: flex;
+  cursor: default;
+  height: 1.1em;
+}
+
+.tag:hover {
+  background-color: dodgerblue;
+}
+
+.title {
+  flex: 10;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.title:hover {
+  animation: marquee 5s linear infinite;
+}
+
+.pNum {
+  flex: 3;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tNum {
+  flex: 4;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close img {
+  width: 1em;
+  cursor:pointer;
+}
+
+@keyframes marquee {
+  0% {
+    text-indent: 7em;
+  }
+  100% {
+    text-indent: -7em;
+  }
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: rgba(0,0,0,0.06);
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(0,0,0,0.12);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+

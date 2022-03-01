@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "bilibiliClickProgressBar",
+  "version": "1.0",
+  "author": "fireworks99",
+
+
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "辅助点击进度条",
+    "default_popup": "popup.html"
+  },
+  "description": "B站进度条点击——辅助工具",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": [],
+    "js": ["content-script.js"]
+  }],
+  "permissions": ["scripting", "storage", "contextMenus", "notifications"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["webPage.js"],
+      "matches": ["<all_urls>"]
+    }]
+}

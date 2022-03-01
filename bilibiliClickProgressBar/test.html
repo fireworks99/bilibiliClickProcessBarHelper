@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    window.onload = function () {
+
+      // let b = document.getElementById("new");
+      // b.onclick = function () {
+      //   let btn = document.createElement("button");
+      //   btn.setAttribute("class", "demo");
+      //   btn.innerHTML = "new";
+      //   document.body.appendChild(btn);
+      // }
+      //
+      // document.body.onclick = function (e) {
+      //   e = e || window.event;
+      //   // if(e.target.className ==="demo") alert("Hello");
+      //   console.log(e.target);
+      //   console.log(e.target.getElementsByClassName('url')[0].innerHTML);
+      // }
+
+      // let s = document.createElement('script');
+      // s.src = "webPage.js";
+      // s.onload = function() {
+      //   alert("finish!");
+      //   this.remove();
+      // };
+      // (document.head || document.documentElement).appendChild(s);
+    }
+  </script>
+</head>
+
+<body>
+<button class="demo">1<span class="url">A</span></button>
+<button class="demo">2</button>
+<button class="demo">3</button>
+<button class="demo">4</button>
+<button class="demo">5</button>
+
+<button id="new">new<img src="close.svg"/></button>
+
+<!--<script>-->
+<!--  function doFirst(doSth, args) {-->
+<!--    console.log("first");-->
+<!--    doSth(args);-->
+<!--  }-->
+<!--  doFirst(function (s) {-->
+<!--    console.log(s[0]);-->
+<!--  }, ["second"])-->
+<!--</script>-->
+
+</body>
+</html>
