@@ -41,15 +41,19 @@ function getPNum() {
   let pNum = 1;
   let div = document.getElementById("multi_page");
   if(div != null) {
-    let lis = div.getElementsByClassName("on");
+    // let lis = div.getElementsByClassName("on");
+    let lis = div.getElementsByClassName("cur-list");
     if(lis.length > 0) {
-      let ps = lis[0].getElementsByClassName("page-num");
-      if(ps.length > 0) {
-        let p = ps[0].innerHTML;
-        pNum = parseInt(p.substr(1));
-      } else {
-        let spans = lis[0].getElementsByTagName("span");
-        if(spans.length === 1) pNum = parseInt(spans[0].innerHTML);
+      lis = lis[0].getElementsByClassName("on");
+      if(lis.length > 0) {
+        let ps = lis[0].getElementsByClassName("page-num");
+        if(ps.length > 0) {
+          let p = ps[0].innerHTML;
+          pNum = parseInt(p.substr(1));
+        } else {
+          let spans = lis[0].getElementsByTagName("span");
+          if(spans.length === 1) pNum = parseInt(spans[0].innerHTML);
+        }
       }
     }
   }
